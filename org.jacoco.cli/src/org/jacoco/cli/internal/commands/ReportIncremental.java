@@ -74,7 +74,7 @@ public class ReportIncremental extends Command {
 	@Option(name = "--html", usage = "output directory for the HTML report", metaVar = "<dir>")
 	File html;
 
-	@Option(name = "--sourcefiles", usage = "location of the source files of previous version", metaVar = "<path>")
+	@Option(name = "--oldsourcefiles", usage = "location of the source files of previous version", metaVar = "<path>")
 	List<File> oldSourceFiles = new ArrayList<File>();
 
 	@Override

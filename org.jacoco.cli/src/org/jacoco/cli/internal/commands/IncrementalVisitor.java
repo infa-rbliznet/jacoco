@@ -44,7 +44,6 @@ public class IncrementalVisitor implements IReportVisitor {
 	private final ISourceFileLocator oldSourceLocator;
 
 	/**
-	 * @param lineDiff
 	 * @param oldSourceLocator
 	 */
 	public IncrementalVisitor(final ISourceFileLocator oldSourceLocator) {
@@ -107,9 +106,6 @@ public class IncrementalVisitor implements IReportVisitor {
 				}
 
 			}
-			System.out.println("Total Number of lines changed: "
-					+ totalNumberOfLinesChanged + ", coverage percent:"
-					+ (linesCovered / totalNumberOfLinesChanged));
 
 //			for (final IClassCoverage clazz : pkg.getClasses()) {
 //				final String fileName = clazz.getSourceFileName();
@@ -118,6 +114,10 @@ public class IncrementalVisitor implements IReportVisitor {
 //				}
 //			}
 		}
+		final float percent = totalNumberOfLinesChanged == 0 ? 100
+				: (linesCovered / totalNumberOfLinesChanged);
+		System.out.println("Total Number of lines changed: "
+				+ totalNumberOfLinesChanged + ", coverage percent:" + percent);
 	}
 
 	private float getCoveragePercent(final ILine iLine) {
