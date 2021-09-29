@@ -116,8 +116,9 @@ public class IncrementalVisitor implements IReportVisitor {
 		}
 		final float percent = totalNumberOfLinesChanged == 0 ? 100
 				: (linesCovered / totalNumberOfLinesChanged);
-		System.out.println("Total Number of lines changed: "
-				+ totalNumberOfLinesChanged + ", coverage percent:" + percent);
+		System.out.println(
+				"Total Number of lines changed: " + totalNumberOfLinesChanged
+						+ ", coverage percent: " + percent * 100);
 	}
 
 	private float getCoveragePercent(final ILine iLine) {
