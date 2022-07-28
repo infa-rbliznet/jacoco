@@ -5,4 +5,7 @@ target/
 org.jacoco.agent/src/jacocoagent.jar
 .idea
 *.iml
-.html
+*.html
+*.java.html
+*.gif
+*.css

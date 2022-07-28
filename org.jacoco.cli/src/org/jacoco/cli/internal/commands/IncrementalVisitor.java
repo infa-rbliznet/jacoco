@@ -85,7 +85,7 @@ public class IncrementalVisitor implements IReportVisitor {
 							final int startLine = d.getTarget().getPosition();
 							final int lineCount = d.getTarget().getLines()
 									.size();
-							for (int i = startLine; i < startLine
+							for (int i = startLine + 1; i <= startLine
 									+ lineCount; i++) {
 								final ILine iLine = source.getLine(i);
 								final float percent = getCoveragePercent(iLine);
